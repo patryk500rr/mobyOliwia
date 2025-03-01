@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>demoObywatel</title>
     <link rel="shortcut icon" href="https://fakeobywatel.site/fakeObywatel/dowod_files/favicon.ico" type="image/x-icon">
     <meta name="theme-color" content="#fff">
@@ -13,13 +12,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="https://fakeobywatel.site/fakeObywatel/dowod_files/main.css">
     <link rel="stylesheet" href="dowodnowy.css">
-    <link rel="manifest" href="https://fakeobywatel.site/fakeObywatel/manifest.json">
+    <link rel="manifest" href="manifest.json">
 
     <noscript data-n-css=""></noscript>
     <script>
         window.addEventListener('load', function() {
             setTimeout(function() {
-            świndow.scrollTo(0, 1);
+            window.scrollTo(0, 1);
         }, 0);
 });
     </script>
@@ -282,6 +281,13 @@
     </section>
     <script src="wybor.js"></script>
     <script src="scale.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+        .then((reg) => console.log('Service Worker zarejestrowany:', reg))
+        .catch((err) => console.log('Błąd Service Worker:', err));
+        }
+    </script>
 
 
 </body></html>
